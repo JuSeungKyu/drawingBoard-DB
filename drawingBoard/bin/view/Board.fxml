@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Line?>
+
+<AnchorPane fx:id="root" prefHeight="593.0" prefWidth="993.0" stylesheets="@../application/application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.Board">
+   <children>
+      <Button layoutX="881.0" layoutY="483.0" mnemonicParsing="false" onAction="#dbSave" prefHeight="65.0" prefWidth="104.0" text="데이터베이스에저장" textAlignment="CENTER" wrapText="true" />
+      <Button layoutX="887.0" layoutY="554.0" mnemonicParsing="false" onAction="#back" prefHeight="29.0" prefWidth="92.0" text="돌아가기" />
+      <Button layoutX="887.0" layoutY="403.0" mnemonicParsing="false" onAction="#save" prefHeight="29.0" prefWidth="92.0" text="다운로드" />
+      <Label layoutX="202.0" layoutY="561.0" text="색:" />
+      <Label layoutX="17.0" layoutY="561.0" text="선:" />
+      <Canvas id="canvas" fx:id="borad" height="534.0" layoutX="17.0" layoutY="14.0" onMouseDragged="#canvasDrawLine" onMousePressed="#canvasBeginpath" width="858.0" />
+      <ColorPicker fx:id="colorPicker" layoutX="226.0" layoutY="557.0" onAction="#changeColor" prefHeight="29.0" prefWidth="142.0" />
+      <TextField fx:id="lineSize" layoutX="43.0" layoutY="557.0" prefHeight="23.0" prefWidth="92.0" text="1" />
+      <Button layoutX="145.0" layoutY="557.0" mnemonicParsing="false" onAction="#lineSizeChange" text="변경" />
+      <Button layoutX="883.0" layoutY="199.0" mnemonicParsing="false" onAction="#addImage" text="이미지 추가" />
+      <TextField fx:id="ImagePointX" layoutX="919.0" layoutY="46.0" prefHeight="23.0" prefWidth="49.0" />
+      <Label layoutX="895.0" layoutY="5.0" prefHeight="45.0" prefWidth="76.0" text="이미지좌표" textAlignment="CENTER" wrapText="true" />
+      <Label layoutX="895.0" layoutY="50.0" text="x : " />
+      <TextField fx:id="ImagePointY" layoutX="919.0" layoutY="73.0" prefHeight="23.0" prefWidth="49.0" />
+      <Label layoutX="895.0" layoutY="77.0" text="y : " />
+      <TextField fx:id="ImageSizeX" layoutX="921.0" layoutY="135.0" prefHeight="23.0" prefWidth="49.0" />
+      <Label layoutX="897.0" layoutY="139.0" text="x : " />
+      <TextField fx:id="ImageSizeY" layoutX="921.0" layoutY="162.0" prefHeight="23.0" prefWidth="49.0" />
+      <Label layoutX="897.0" layoutY="166.0" text="y : " />
+      <Label layoutX="895.0" layoutY="96.0" prefHeight="45.0" prefWidth="76.0" text="이미지크기" textAlignment="CENTER" wrapText="true" />
+      <Line endX="757.0" layoutX="118.0" layoutY="548.0" startX="-100.0" />
+      <Line endX="-352.0" endY="-283.0" layoutX="369.0" layoutY="297.0" startX="-352.0" startY="251.0" />
+      <Line endX="-362.0" endY="-293.0" layoutX="379.0" layoutY="307.0" startX="494.0" startY="-293.0" />
+      <Line endX="486.0" endY="231.0" layoutX="389.0" layoutY="317.0" startX="486.0" startY="-303.0" />
+      <Button layoutX="887.0" layoutY="442.0" mnemonicParsing="false" onAction="#delete" prefHeight="29.0" prefWidth="92.0" text="삭제" />
+      <Button fx:id="addTextBtn" layoutX="514.0" layoutY="557.0" mnemonicParsing="false" onAction="#addText" prefHeight="29.0" prefWidth="170.0" text="텍스트 입력하기" />
+      <ComboBox fx:id="linetype" layoutX="378.0" layoutY="557.0" onAction="#chagneLineType" prefHeight="29.0" prefWidth="116.0" promptText="선종류" />
+      <Label layoutX="696.0" layoutY="561.0" prefHeight="15.0" prefWidth="67.0" text="폰트크기 :" />
+      <TextField fx:id="fontSize" layoutX="755.0" layoutY="557.0" prefHeight="23.0" prefWidth="92.0" text="20" />
+   </children>
+</AnchorPane>
