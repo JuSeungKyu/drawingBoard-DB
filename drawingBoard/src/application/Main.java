@@ -13,7 +13,7 @@ public class Main extends Application {
 	@Override
 	public void start(Stage primaryStage) {
 		try {
-			new JDBC("112.153.122.10", "skills03", "skills03", "123456");
+			new JDBC("localhost", "", "root", "");
 			
 			AnchorPane ap = (AnchorPane)FXMLLoader.load(getClass().getResource("/view/Login.fxml"));
 			Scene scene = new Scene(ap);
